@@ -1,4 +1,4 @@
-export default function Heures() {
+export default function Heures({datas}) {
     return (
         <div>
             <h2>Affichage par heure pour aujourd'hui</h2>
@@ -12,9 +12,9 @@ export default function Heures() {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>20 °C</td>
-                    <td>1024 Hpa</td>
-                    <td>20 %</td>
+                    <td>{datas.temperature}</td>
+                    <td>{datas.pression}</td>
+                    <td>{datas.humidite}</td>
                     </tr>
                 </tbody>
             </table>

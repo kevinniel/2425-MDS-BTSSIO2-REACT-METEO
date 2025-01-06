@@ -3,29 +3,33 @@ import Heures from '../../Components/heures'
 import Semaine from '../../Components/semaine';
 import Compteur from '../../Components/compteur';
 
+import { useState } from 'react';
+
+
 const datas = {
   temp: "252 °C",
   pression: "1074 Hpa",
   humidite: "20 %"
 };
-const datas2 = {
-  temp: "2 °C",
-  pression: "974 Hpa",
-  humidite: "80 %"
-};
 
 function App() {
+  const [affichage, setAffichage]= useState(false);
+
+  const changeAffichage = () => {
+    setAffichage( (val) => !val )
+  }
+
   return (
     <div className="App">
       <h1>MÉTÉO</h1>
-      <button>Affichage par heure</button>
-      <button>Affichage par semaine</button>
+      <button onClick={changeAffichage}>Passer en affichage par {affichage ? "heures" : "semaine"}</button>
 
+      { !affichage && <Heures datas={datas} />}
+      { affichage && <Semaine /> }
+      
+      <hr />
+      
       <Compteur />
-
-      <Heures />
-      <Semaine datas={datas} />
-      <Semaine datas={datas2} />
     </div>
   );
 }
