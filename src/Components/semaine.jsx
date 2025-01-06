@@ -7,8 +7,7 @@ export default function Semaine({ datas }) {
 
     useEffect(() => {
         const fetchWeatherData = async () => {
-            // const apiKey = "bc2fe2ab317fd391ca9683c0f45aa957";
-            const apiKey = "bc2e2ab317fd391ca9683c0f45aa957";
+            const apiKey = "votre_cle_api";
             const city = "Paris";
             const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=en&units=metric`;
             
