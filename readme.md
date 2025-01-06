@@ -2,7 +2,9 @@
 
 Sujet : Application météo
 
-Source : https://openweathermap.org/
+## Prérequis
+
+Vous aurez besoin de vous créer une clé API pour vous servir de l'API d'OpenWeatherMap ! Par ici : https://openweathermap.org/
 
 ## Installation
 
