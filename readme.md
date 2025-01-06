@@ -10,3 +10,8 @@ Initialiser l'application react
 ```
 npx create-react-app meteo
 ```
+
+Lancer l'application
+```
+npm start
+```
